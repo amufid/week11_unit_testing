@@ -122,7 +122,7 @@ describe('Create todo', () => {
          .send({ title: 'Cleaning room' })
          .set('Accept', 'application/json')
          .expect('Content-Type', /json/)
-         .expect(200)
+         .expect(201)
          .then(response => {
             const { body } = response
             const { data } = body
